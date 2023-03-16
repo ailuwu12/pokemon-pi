@@ -4,6 +4,9 @@ const validate = (req, res, next) => {
     if(!pokemon.hp) return res.status(400).json({error: "Missing hp"});
     if(!pokemon.attack) return res.status(400).json({error: "Missing attack"});
     if(!pokemon.defense) return res.status(400).json({error: "Missing defense"});
+    if(Number(pokemon.hp > 300)) throw new Error("too many hp")
+    if(Number(pokemon.attack > 200)) throw new Error("too many attack")
+    if(Number(pokemon.defense > 200)) throw new Error("too many defense")
     if(pokemon.types.length === 0) return res.status(400).json({error: "Missing types"});
     if(pokemon.types.length > 3) return res.status(400).json({error: "Too many types"});
     if(pokemon.types.includes("19") && pokemon.types.length > 1) return res.status(400).json({error: "Unknown type pokemons can only have that type"});

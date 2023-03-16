@@ -58,6 +58,7 @@ const clearDetail = () => {
 
 const clearOrder = () => {
     return {type: CLEAR_ORDER}
-}
+};
+
 
 export { clearOrder, clearDetail, filterAll, getAllPokemons, getAllTypes, getPokemonById, getPokemonByName, orderByName, orderByAttack }

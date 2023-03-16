@@ -10,6 +10,9 @@ const createPokemon = async (pokemon) => {
     if(Number(pokemon.speed) <= 0) pokemon.speed = null;
     if(Number(pokemon.height) <= 0) pokemon.height = null;
     if(Number(pokemon.weight) <= 0) pokemon.weight = null;
+    if(Number(pokemon.hp > 300)) throw new Error("too many hp")
+    if(Number(pokemon.attack > 200)) throw new Error("too many attack")
+    if(Number(pokemon.defense > 200)) throw new Error("too many defense")
         if(!pokemon.types.length) throw new Error("types cannot be null");
         if(pokemon.types.length > 3) throw new Error("too many types");
 
