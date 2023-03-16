@@ -79,7 +79,7 @@ const Form = () => {
     const submitHandler = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3001/pokemons", form)
+            const response = await axios.post("/pokemons", form)
             alert("Pokemon successfuly created")
             return response
         } catch (error) {

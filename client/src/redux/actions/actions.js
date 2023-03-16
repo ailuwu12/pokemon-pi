@@ -3,7 +3,7 @@ import { CLEAR_ORDER, CLEAR_DETAIL, FILTER_ALL, GET_ALL_POKEMONS, GET_ALL_TYPES,
 
 const getAllPokemons = () => {
     return async (dispatch) => {
-        const apiData = await axios("http://localhost:3001/pokemons");
+        const apiData = await axios("/pokemons");
         const pokemons = apiData.data;
         
         dispatch({type: GET_ALL_POKEMONS, payload: pokemons})
@@ -12,7 +12,7 @@ const getAllPokemons = () => {
 
 const getAllTypes = () => {
     return async (dispatch) => {
-        const apiData = await axios("http://localhost:3001/types");
+        const apiData = await axios("/types");
         const types = apiData.data;
         
         dispatch({type: GET_ALL_TYPES, payload: types})
@@ -21,7 +21,7 @@ const getAllTypes = () => {
 
 const getPokemonById = (id) => {
     return async(dispatch) => {
-        const apiData = await axios(`http://localhost:3001/pokemons/${id}`);
+        const apiData = await axios(`/pokemons/${id}`);
         const pokemon = apiData.data;
         dispatch({type: GET_POKEMON_BY_ID, payload: pokemon})
     }
@@ -30,7 +30,7 @@ const getPokemonById = (id) => {
 const getPokemonByName = (name) => {
     return async (dispatch) =>{
         try {
-            const apiData = await axios(`http://localhost:3001/pokemons?name=${name}`);
+            const apiData = await axios(`/pokemons?name=${name}`);
             const pokemon = apiData.data
 
             dispatch({type: GET_POKEMON_BY_NAME, payload: pokemon})
