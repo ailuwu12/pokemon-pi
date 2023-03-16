@@ -106,7 +106,7 @@ const Form = () => {
     console.log(form)
 
     return(
-        <div>
+        <div className={style.bigDiv}>
         <NavLink to="/home"><button className={style.backHome}>Back Home</button></NavLink>
         <div className={style.container}>
         <form onSubmit={submitHandler}>
