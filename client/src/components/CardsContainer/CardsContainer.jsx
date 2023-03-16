@@ -33,7 +33,7 @@ const CardsContainer = () => {
 
     if (isLoading || !pokemons.length) {
         return (
-            <div>
+            <div style={{width: "100%"}}>
                 <div className={style.container}>
                     <img src="https://i.gifer.com/5Q0v.gif" alt="loading"/>
                     <p>Loading pokemons...</p>

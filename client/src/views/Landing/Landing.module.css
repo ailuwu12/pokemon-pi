@@ -4,6 +4,7 @@
     background-image: url("https://images.alphacoders.com/235/235203.png");
     height: 100vh;
     overflow: hidden;
+    width: 100%
 }
 
 .container {
