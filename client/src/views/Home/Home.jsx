@@ -13,7 +13,7 @@ const Home = () => {
     }, [dispatch])
 
         return(
-            <div>
+            <div style={{width: "100%"}}>
             <NavBar/>
             <CardsContainer/>
             </div>
