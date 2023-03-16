@@ -1,0 +1,61 @@
+.background{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://images.alphacoders.com/235/235203.png");
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 100%;
+    border-radius: 20px;
+    margin: 50px 100px 50px 100px;
+    overflow: hidden;
+    background-color: #f8f8f88f;
+    box-shadow: 0px 0px 10px #333333;
+    padding: 50px;
+  }
+
+  .pokebolaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .pokebola {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+  }
+  .pokebola:before, .pokebola:after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+  }
+  .pokebola:before {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #333333;
+  }
+  .pokebola:after {
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    top: 10%;
+    left: 19%;
+    background-color: #f23600;
+  }
+  .pokebola img {
+    position: relative;
+    z-index: 2;
+    height: 80%;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+  }
+
+  .pokebola:hover {
+    transform: scale(1.1);
+  }

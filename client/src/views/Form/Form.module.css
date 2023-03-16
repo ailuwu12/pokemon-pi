@@ -1,0 +1,74 @@
+.container {
+    max-width: 100%;
+    border-radius: 20px;
+    margin: 20px 100px 50px 100px;
+    overflow: hidden;
+    background-color: #f8f8f88f;
+    box-shadow: 0px 0px 10px #333333;
+    padding: 50px;
+  }
+
+  .container select {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 10px #333333;
+    margin: 20px;
+    width: 230px;
+  }
+
+  .container input {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 10px #333333;
+    margin: 20px;
+    width: 220px;
+  }
+  
+  .container option {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .container label {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 0;
+    margin-top: 10px;
+    display: block;
+  }
+
+  .errorText{
+    color: #fd422e;
+  }
+
+  .error{
+    border: solid #fd422e 2px;
+  }
+
+  .typeRender{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .typeSelected{
+    font-size: 25px;
+    color: #333;
+  }
+
+  .closeButton{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .backHome{
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  
