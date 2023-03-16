@@ -34,7 +34,7 @@ const Detail = () => {
     if(pokemon?.types?.length > 1 && color === "normal") color = pokemon?.types[1]
     
     return(
-        <div>
+        <div className={style.bigDiv}>
         <div key={pokemon?.id} className={style.container}>
         <div className={`${style.header} ${types[color]}`}></div>
         <div className={style.pokebola}><img src={pokemon?.alterImage ? pokemon?.alterImage : pokemon?.image} alt={pokemon?.name}/></div>

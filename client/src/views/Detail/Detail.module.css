@@ -1,3 +1,8 @@
+.bigDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .container{
     width: 1000px;
@@ -7,6 +12,7 @@
     background-color: #f8f8f8;
     box-shadow: 0px 0px 10px #333333;
     position: relative;
+    box-shadow: 19px 20px 20px 4px #333333;
 }
 
 .header {
