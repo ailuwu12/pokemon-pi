@@ -21,7 +21,7 @@ const Detail = () => {
 
     if (!pokemon) {
         return (
-            <div>
+            <div className={style.bigDiv}>
                 <div className={style.container}>
                     <img src="https://i.gifer.com/5Q0v.gif" alt="loading"/>
                     <p>Loading pokemon...</p>
