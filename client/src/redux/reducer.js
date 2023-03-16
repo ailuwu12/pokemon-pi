@@ -79,6 +79,7 @@ const reducer = (state = initialState, action) => {
                })
                return {...state, orderedPokemons: orderPokemonsNames}
              }
+             break;
 
             case ORDER_BY_ATTACK:
             let allPokemonsAttack = state.filteredPokemons.length ? [...state.filteredPokemons] : [...state.pokemonsGlobal];;
@@ -108,6 +109,7 @@ const reducer = (state = initialState, action) => {
                })
                return {...state, orderedPokemons: orderPokemonsAttack}
              }
+             break;
              
             case CLEAR_DETAIL:
               return {...state, selectedPokemon: null}
