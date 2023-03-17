@@ -54,7 +54,10 @@ const reducer = (state = initialState, action) => {
           case ORDER_BY_NAME:
             let allPokemonsNames = [...state.pokemonsGlobal];
 
-            if(typeof state.filteredPokemons === "string") allPokemonsNames = "error";
+            if(typeof state.filteredPokemons === "string"){
+              return {...state, orderedPokemons: "error"}
+            } 
+
             else state.filteredPokemons.length ? allPokemonsNames = [...state.filteredPokemons] : allPokemonsNames = [...state.pokemonsGlobal]
 
             if(action.payload === "aToZ"){
@@ -87,7 +90,9 @@ const reducer = (state = initialState, action) => {
             case ORDER_BY_ATTACK:
               let allPokemonsAttack = [...state.pokemonsGlobal];
 
-              if(typeof state.filteredPokemons === "string") allPokemonsAttack = "error";
+              if(typeof state.filteredPokemons === "string"){
+                return {...state, orderedPokemons: "error"}
+              }
               else state.filteredPokemons.length ? allPokemonsAttack = [...state.filteredPokemons] : allPokemonsAttack = [...state.pokemonsGlobal]
 
             if(action.payload === "ascending"){
