@@ -52,7 +52,7 @@ const reducer = (state = initialState, action) => {
               }
 
           case ORDER_BY_NAME:
-            let allPokemonsNames = state.filteredPokemons.length ? [...state.filteredPokemons] : [...state.pokemonsGlobal];
+            let allPokemonsNames = typeof state.filteredPokemons !== "string" ? [...state.filteredPokemons] : [...state.pokemonsGlobal];
 
             if(action.payload === "aToZ"){
              let orderPokemonsNames = allPokemonsNames.sort((a, b) => {
