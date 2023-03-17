@@ -52,7 +52,10 @@ const reducer = (state = initialState, action) => {
               }
 
           case ORDER_BY_NAME:
-            let allPokemonsNames = typeof state.filteredPokemons !== "string" ? [...state.filteredPokemons] : [...state.pokemonsGlobal];
+            let allPokemonsNames = [...state.pokemonsGlobal];
+
+            if(typeof state.filteredPokemons === "string") allPokemonsNames = "error";
+            else state.filteredPokemons.length ? allPokemonsNames = [...state.filteredPokemons] : allPokemonsNames = [...state.pokemonsGlobal]
 
             if(action.payload === "aToZ"){
              let orderPokemonsNames = allPokemonsNames.sort((a, b) => {
@@ -82,7 +85,10 @@ const reducer = (state = initialState, action) => {
              break;
 
             case ORDER_BY_ATTACK:
-            let allPokemonsAttack = state.filteredPokemons.length ? [...state.filteredPokemons] : [...state.pokemonsGlobal];;
+              let allPokemonsAttack = [...state.pokemonsGlobal];
+
+              if(typeof state.filteredPokemons === "string") allPokemonsAttack = "error";
+              else state.filteredPokemons.length ? allPokemonsAttack = [...state.filteredPokemons] : allPokemonsAttack = [...state.pokemonsGlobal]
 
             if(action.payload === "ascending"){
              let orderPokemonsAttack = allPokemonsAttack.sort((a, b) => {
