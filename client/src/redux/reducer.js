@@ -27,6 +27,10 @@ const reducer = (state = initialState, action) => {
             case FILTER_ALL:
               let allPokemons = state.orderedPokemons.length ? [...state.orderedPokemons] : [...state.pokemonsGlobal]
               let filteredByType = allPokemons.filter(pokemon => pokemon.types.includes(action.payload.type))
+
+              if(typeof state.orderedPokemons === "string"){
+                return {...state, filteredPokemons: "error"}
+              }
   
               if(action.payload.type === "all"){
                 filteredByType = [...allPokemons]
