@@ -70,7 +70,7 @@ const Detail = () => {
             </div>
             <label>DEFENSE:</label>
             <div className={`${style.slides} ${progressTypes[color]}`}>
-            <progress id="defense" value={pokemon?.defense} max="500" className={types[color]}></progress>
+            <progress id="defense" value={pokemon?.defense} max="200" className={types[color]}></progress>
             <span>{pokemon?.defense}</span>
             </div>
             </div>
