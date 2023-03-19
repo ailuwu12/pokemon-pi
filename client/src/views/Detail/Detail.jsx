@@ -6,6 +6,7 @@ import style from "./Detail.module.css";
 import types from "./Types.module.css";
 import progressTypes from "./ProgressTypes.module.css";
 import {clearDetail} from "../../redux/actions/actions";
+import pikachu from "../../assets/running-pikachu.gif"
 
 
 const Detail = () => {
@@ -23,7 +24,7 @@ const Detail = () => {
         return (
             <div className={style.bigDiv}>
                 <div className={style.container}>
-                    <img src="https://i.gifer.com/5Q0v.gif" alt="loading"/>
+                    <img style={{width: "25%"}} src={pikachu} alt="loading"/>
                     <p>Loading pokemon...</p>
                 </div>
             </div>

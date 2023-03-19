@@ -1,7 +1,7 @@
 .background{
     margin: 0;
     padding: 0;
-    background-image: url("https://images.alphacoders.com/235/235203.png");
+    background-image: url("../../assets/landing.png");
     height: 100vh;
     overflow: hidden;
     width: 100%

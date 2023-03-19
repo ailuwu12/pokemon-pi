@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import style from "./CardsContainer.module.css";
 import Card from "../Card/Card";
 import Filters from "../Filters/Filters";
+import pikachu from "../../assets/running-pikachu.gif"
+import sadPikachu from "../../assets/pikachu-sad.png"
 
 const CardsContainer = () => {
     const pokemonsGlobal = useSelector(state => state.pokemonsGlobal);
@@ -35,7 +37,7 @@ const CardsContainer = () => {
         return (
             <div style={{width: "100%"}}>
                 <div className={style.container}>
-                    <img src="https://i.gifer.com/5Q0v.gif" alt="loading"/>
+                    <img style={{width: "25%"}} src={pikachu} alt="loading"/>
                     <p>Loading pokemons...</p>
                 </div>
             </div>
@@ -67,7 +69,7 @@ const CardsContainer = () => {
                 <Filters/>
          <div className={style.container}>
           <h1>Error 404: Pokemons Not Found</h1>
-          <img src="https://pink.nyc3.cdn.digitaloceanspaces.com/2023/02/03/file_11106076_512x512.webp" className={style.errorImage} alt="Error"/>
+          <img src={sadPikachu} className={style.errorImage} alt="Error"/>
         </div>
           <button onClick={() => window.location.reload()}>Back To Home</button>
           </div>
