@@ -60,7 +60,7 @@ const Detail = () => {
             <div>
             <label>HP:</label>
             <div className={`${style.slides} ${progressTypes[color]}`}>
-            <progress id="hp" value={pokemon?.hp} max="500" className={types[color]}></progress>
+            <progress id="hp" value={pokemon?.hp} max="300" className={types[color]}></progress>
             <span>{pokemon?.hp}</span>
             </div>
             <label>ATTACK:</label>
