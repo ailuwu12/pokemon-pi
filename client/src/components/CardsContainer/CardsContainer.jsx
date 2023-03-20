@@ -130,7 +130,8 @@ const CardsContainer = () => {
         <span>Page {page} of {totalPages}</span>
       </div>
     ) : (
-      <button onClick={() => setPage(page -1)}>Previous</button>
+      <div><button onClick={() => setPage(page -1)}>Previous</button>
+      <span>Page {page} of {totalPages}</span></div>
     )}
     
             </div>
