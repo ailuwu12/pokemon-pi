@@ -11,7 +11,7 @@ const getAllPokemons = async () => {
         attributes: ["name"],
         model: Type,
         through: {
-        attributes: [],
+        attributes: [], 
         },
       },});
 

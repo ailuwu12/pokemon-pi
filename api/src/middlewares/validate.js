@@ -1,4 +1,3 @@
-const regexImage = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/;
 
 const validate = (req, res, next) => {
     const pokemon = req.body;
@@ -6,7 +5,6 @@ const validate = (req, res, next) => {
     if(!pokemon.hp) return res.status(400).json({error: "Missing hp"});
     if(!pokemon.attack) return res.status(400).json({error: "Missing attack"});
     if(!pokemon.defense) return res.status(400).json({error: "Missing defense"});
-    if(!regexImage.test(pokemon.image)) return res.status(400).json({error: "Invalid image"}); 
     if(Number(pokemon.hp > 300)) return res.status(400).json({error: "HP is too high"});
     if(Number(pokemon.attack > 200)) return res.status(400).json({error: "Attack is too high"});
     if(Number(pokemon.defense > 200)) return res.status(400).json({error: "Defense is too high"});
