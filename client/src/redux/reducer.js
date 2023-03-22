@@ -25,7 +25,7 @@ const reducer = (state = initialState, action) => {
             return {...state, filteredPokemons: action.payload};
 
             case FILTER_ALL:
-              let allPokemons = typeof state.orderedPokemons === "array" && state.orderedPokemons.length ? [...state.orderedPokemons] : [...state.pokemonsGlobal]
+              let allPokemons = typeof state.orderedPokemons !== "string" && state.orderedPokemons.length ? [...state.orderedPokemons] : [...state.pokemonsGlobal]
               let filteredByType = allPokemons.filter(pokemon => pokemon.types.includes(action.payload.type))
 
               if(typeof state.orderedPokemons === "string"){
@@ -66,7 +66,7 @@ const reducer = (state = initialState, action) => {
               return {...state, orderedPokemons: "error"}
             } 
 
-            else typeof state.filteredPokemons === "array" && state.filteredPokemons.length ? allPokemonsNames = [...state.filteredPokemons] : allPokemonsNames = [...state.pokemonsGlobal]
+            else typeof state.filteredPokemons !== "string" && state.filteredPokemons.length ? allPokemonsNames = [...state.filteredPokemons] : allPokemonsNames = [...state.pokemonsGlobal]
 
             if(action.payload === "aToZ"){
              let orderPokemonsNames = allPokemonsNames.sort((a, b) => {
@@ -101,7 +101,7 @@ const reducer = (state = initialState, action) => {
               if(typeof state.filteredPokemons === "string"){
                 return {...state, orderedPokemons: "error"}
               }
-              else typeof state.filteredPokemons === "array" && state.filteredPokemons.length ? allPokemonsAttack = [...state.filteredPokemons] : allPokemonsAttack = [...state.pokemonsGlobal]
+              else typeof state.filteredPokemons !== "string" && state.filteredPokemons.length ? allPokemonsAttack = [...state.filteredPokemons] : allPokemonsAttack = [...state.pokemonsGlobal]
 
             if(action.payload === "ascending"){
              let orderPokemonsAttack = allPokemonsAttack.sort((a, b) => {
