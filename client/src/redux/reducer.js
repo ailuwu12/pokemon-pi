@@ -31,10 +31,6 @@ const reducer = (state = initialState, action) => {
               if(typeof state.orderedPokemons === "string"){
                 return {...state, filteredPokemons: "error"}
               }
-
-              if(typeof state.filteredPokemons === "string"){
-                return {...state, filteredPokemons: "error"}
-              }
   
               if(action.payload.type === "all"){
                 filteredByType = [...allPokemons]
