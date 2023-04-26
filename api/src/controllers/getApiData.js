@@ -3,7 +3,7 @@ const getPokemonById = require("../controllers/getPokemonById");
 
 const getApiData = async () =>
 {
-    let arrayPokemonsApi = [];
+    let arrayPokemonsApi 
 
       // carga de pokeAPI -----------------------------------------
     await axios.get("https://pokeapi.co/api/v2/pokemon?limit=200")
@@ -31,15 +31,10 @@ const getApiData = async () =>
                   };  // return 
               }); // map
           }) 
-          .catch((error) => {
-              return error;
-          });
+          
 
       })
-      .catch((error) => {
-          return error;
-      });
-        // ------------------------------- end - carga de poke API
+      
     return arrayPokemonsApi;
 };
 
