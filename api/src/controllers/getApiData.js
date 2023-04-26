@@ -6,7 +6,7 @@ const getApiData = async () =>
     let arrayPokemonsApi = [];
 
       // carga de pokeAPI -----------------------------------------
-    await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=200`)
+    await axios.get("https://pokeapi.co/api/v2/pokemon?limit=200")
       .then(async (response) => {
           let arrayResultApi = response.data.results;
           let arrayPromises = [];
@@ -17,20 +17,17 @@ const getApiData = async () =>
           .then((pokemons) => {
               arrayPokemonsApi = pokemons.map((p) => {
                   return {
-                      id: p.data.id,
-                      name: p.data.name,
-                      image: p.data.sprites.other.dream_world.front_default,  // url imagen
-                      hp: p.data.stats[0].base_stat,
-                      attack: p.data.stats[1].base_stat,
-                      defense: p.data.stats[2].base_stat,
-                      speed: p.data.stats[3].base_stat,
-                      height: p.data.height,
-                      weight: p.data.weight,
-                      types: p.data.types.map((t) => {
-                          return {
-                              name: t.type.name
-                          }
-                      })
+                    id: p.data.id,
+                    name: p.data.name,
+                    image: p.data.sprites.front_default,
+                    alterImage: p.data.sprites.other.dream_world.front_default,
+                    hp: p.data.stats[0].base_stat,
+                    attack: p.data.stats[1].base_stat,
+                    defense: p.data.stats[2].base_stat,
+                    speed: p.data.stats[5].base_stat,
+                    height: p.data.height,
+                    weight: p.data.weight,
+                    types: p.data.types.map((t) => t.type.name),
                   };  // return 
               }); // map
           }) 
@@ -47,3 +44,4 @@ const getApiData = async () =>
 };
 
 module.exports = getApiData;
+
